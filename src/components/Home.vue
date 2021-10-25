@@ -1,12 +1,19 @@
 <template>
-  <div>
-      <h1>je suis le home</h1>
+  <div class="home">
+      <learn></learn>
+      <client></client>
   </div>
 </template>
 
 <script>
+import Client from './client.vue'
+import learnMore from './learnMore.vue'
 export default {
-    name:'Home'
+    name:'Home',
+    components:{
+      'learn':learnMore,
+      'client':Client
+    }
 }
 </script>
 

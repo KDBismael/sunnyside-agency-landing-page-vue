@@ -1,16 +1,45 @@
  <template>
   <div class="sunnyPage">
-    <header-mobile-top></header-mobile-top>
+    <header-top v-show="!mobile"></header-top>
+    <header-mobile-top v-show="mobile"></header-mobile-top>
     <router-view/>
+    <footer-bottom></footer-bottom>
   </div>
 </template>
 
 <script>
+import footer from './components/footer.vue'
+import header from './components/header.vue'
 import headerMobile from './components/headerMobile.vue'
 export default {
   name: 'App',
   components: {
+    'header-top':header,
     'header-mobile-top':headerMobile,
+    'footer-bottom':footer
+  },
+  data(){
+    return{
+      mobile:null,
+      width:null
+    }
+  },
+  created(){
+    window.addEventListener('resize',this.toggleMobileHeader)
+    this.toggleMobileHeader();
+  },
+  methods:{
+    toggleMobileHeader:function(){
+        this.width=window.innerWidth;
+        if(this.width<=375){
+          this.mobile=true;
+          return;
+        }
+        else{
+          this.mobile=false;
+          return;
+        }
+    }
   }
 }
 </script>

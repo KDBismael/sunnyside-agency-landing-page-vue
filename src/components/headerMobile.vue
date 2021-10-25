@@ -1,18 +1,17 @@
 <template>
   <div class="header">
-
         <div class="nav-head">
             <div class="logo">
                 <img src="../../images/logo.svg" alt=" logo">
             </div>
-            <div class="burger" >
+            <div  v-on:click="toggleNav" class="burger" >
                 <img src="../../images/icon-hamburger.svg" alt="">
             </div>
         </div>
         <p class="text">{{navText}}</p>
-        <div class="nav-menu">
-           <div class="modalContent">
-                <nav>
+        <div v-if="burger" class="nav-menu">
+           <div v-on:click="toggleNav" class="modalContent">
+             <nav>
                 <ul>
                     <router-link to="/">About</router-link>
                     <router-link class="service" to="/">Services</router-link>
@@ -35,13 +34,10 @@ export default {
     data(){
         return{
             navText :"We are creatives",
-            burger:null,
+            burger:false,
         }
     },
     methods:{
-        resizing:function(){
-
-        },
         toggleNav:function(){
             this.burger=!this.burger
         }
@@ -54,8 +50,9 @@ export default {
         background-image: url('../../images/mobile/image-header.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+        background-position-y: bottom;
         width: 100%;
-        height: 20rem;
+        min-height: 20rem;
         display: grid;
         grid-template-columns: 55% 45%;
         position: relative;
@@ -111,9 +108,8 @@ export default {
                 width: 20px;
                 transform: translateY(-15px);
             }
-        }
+        } /*menu modal part */
         .nav-menu{
-            display: none;
             position: fixed;
             left: 0;
             right: 0;
@@ -122,7 +118,7 @@ export default {
             width: 100%;
             height: 100%;
             z-index: 1;
-            .modalcontent{
+            .modalContent{
                 width: 100%;
                 height: 100%;
                 display: grid;
@@ -155,7 +151,7 @@ export default {
                             align-self: center;
                         }
                         .contact{
-                            color: black;
+                            color: black !important;
                             font-weight:bold;
                             width: 60%;
                             height: 40px;
@@ -171,6 +167,8 @@ export default {
                         .router-link-active{
                             justify-self: center;
                             list-style-type: none;
+                            color: #97959d;
+                            text-decoration: none;
                             &:first-child{
                                 align-self:end;
                             }
@@ -187,6 +185,11 @@ export default {
             }
         }
 
+    }
+     @media (min-width:300) {
+        .header{
+            min-height: 26rem;
+        }
     }
 </style>
     
