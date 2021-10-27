@@ -1,8 +1,10 @@
 <template>
   <div class="home">
       <learn></learn>
-      <art :artG="artG"></art>
-      <art :artP="artP"></art>
+      <div class="art">
+        <art :artG="artG"></art>
+        <art :artP="artP"></art>
+      </div>
       <client></client>
       <image-gallery></image-gallery>
 
@@ -29,11 +31,20 @@ export default {
         artG:"graphic",
         artP:"photography"
       }
+    },
+    props:{
+      mobile:Boolean,
     }
 
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .art{
+     @media (min-width:375px) {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+     }
+  }
 
 </style>

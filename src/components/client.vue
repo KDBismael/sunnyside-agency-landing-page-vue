@@ -40,7 +40,18 @@ export default {
 </script>
 
 <style scoped>
-
+@media (min-width:375px) {
+  .cli{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .cli h1:first-child{
+    grid-column: 1/4;
+  }
+  .cli .emily p{
+    font-size:10px ;
+  }
+}
 .cli h1:first-child{
     font-size: 20px;
     font-family: "barlowBold";
@@ -82,5 +93,11 @@ export default {
     font-size: 11px;
     margin-top: .3rem;
     color: #b0aeae;
+}
+@media (min-width:475px) {
+   .cli .emily p{
+    font-size:15px ;
+    padding: 1rem;
+  }
 }
 </style>

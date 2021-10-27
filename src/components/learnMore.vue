@@ -33,7 +33,6 @@ export default {
     data(){
         return{
             image:'../../images/mobile/image-transform.jpg',
-            dp:null
            }
      }
 }
@@ -42,6 +41,9 @@ export default {
 <style lang="scss" scoped>
     .transform{
         display: grid;
+        @media (min-width:375px) {
+            grid-template-columns: repeat(2,1fr);
+        }
         .image1{
             display: grid;
             img{
@@ -50,8 +52,22 @@ export default {
                 object-position: center;
                 object-fit: cover;
             }
+            @media (min-width:375px) {
+                grid-column: 1/3;
+                grid-row: 1/3;
+                justify-self: end;
+                align-self: start;
+                width: 50%;
+            }
         }
         .text{
+             @media (min-width:375px) {
+                grid-column: 1/3;
+                grid-row: 1/3;
+                justify-self: start;
+                align-self: start;
+                width: 50%;
+            }
             display: grid;
             place-content: center;
             h1{
@@ -61,6 +77,12 @@ export default {
                 font-size: 25px;
                 font-family: "barlowBold";
                 color: #4d535c;
+                @media (min-width:375px) {
+                    padding: 1.5rem;
+                    text-align: center;
+                    padding-bottom: 0;
+                    font-size: 15px;
+                }
             }
             p{
                 font-size: 14px;
@@ -69,6 +91,11 @@ export default {
                 justify-self: center;
                 color: #b2b0b5;
                 font-weight: bold;
+                 @media (min-width:375px) {
+                    padding: .5rem;
+                    text-align: center;
+                    font-size: 10px;
+                }
             }
             a{
                 text-decoration: none;
@@ -76,21 +103,41 @@ export default {
                 justify-self: center;
                 font-family: "barlowBold";
                 color: #4d535c;
+                @media (min-width:375px) {
+                    margin-bottom: 0rem;
+                }
             }
         }
     }
     .stand{
         display: grid;
+        @media (min-width:375px) {
+            grid-template-columns: repeat(2,1fr);
+        }
         .image1{
-             display: grid;
+            display: grid;
             img{
                 width: 100%;
                 height: auto;
                 object-position: center;
                 object-fit: cover;
             }
+            @media (min-width:375px) {
+                grid-column: 1/3;
+                grid-row: 1/3;
+                justify-self:start;
+                align-self: start;
+                width: 50%;
+            }
         }
         .text{
+                @media (min-width:375px) {
+                grid-column: 1/3;
+                grid-row: 1/3;
+                justify-self:end;
+                align-self: start;
+                width: 50%;
+            }
             display: grid;
             place-content: center;
             h1{
@@ -100,6 +147,12 @@ export default {
                 font-size: 25px;
                 font-family: "barlowBold";
                 color: #4d535c;
+                @media (min-width:375px) {
+                    padding: 1.5rem;
+                    text-align: center;
+                    padding-bottom: 0;
+                    font-size: 15px;
+                }
             }
             p{
                 font-size: 14px;
@@ -108,6 +161,11 @@ export default {
                 justify-self: center;
                 color: #b2b0b5;
                 font-weight: bold;
+                    @media (min-width:375px) {
+                    padding: .5rem;
+                    text-align: center;
+                    font-size: 10px;
+                }
             }
             a{
                 text-decoration: none;
@@ -115,6 +173,9 @@ export default {
                 justify-self: center;
                 font-family: "barlowBold";
                 color: #4d535c;
+                @media (min-width:375px) {
+                    margin-bottom: 0rem;
+                }
             }
         }
     }

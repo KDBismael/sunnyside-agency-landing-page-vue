@@ -168,6 +168,9 @@ export default {
                             border-radius: 1.5rem;
                             padding-top: 5%;
                             padding-left: 17%;
+                            @media (min-width:321px) {
+                                padding-left: 20%;
+                            }
                             a{
                                 color:black;
                             }

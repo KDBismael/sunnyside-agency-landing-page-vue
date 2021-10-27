@@ -67,4 +67,12 @@ export default {
     .social path:hover{
         fill: white;
     }
+    @media (min-width:475px){
+         .social{
+            grid-column-gap: 3.5rem;
+        }
+        .di{
+            grid-column-gap: 2rem;
+        }
+    }
 </style>

@@ -2,7 +2,7 @@
   <div class="sunnyPage">
     <header-top v-show="!mobile"></header-top>
     <header-mobile-top v-show="mobile"></header-mobile-top>
-    <router-view/>
+    <router-view></router-view>
     <footer-bottom></footer-bottom>
   </div>
 </template>

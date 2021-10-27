@@ -54,6 +54,11 @@ export default {
       @media (max-width:234px) {
         bottom: 2%;
       }
+       @media (min-width:375px) {
+        font-size: 10px;
+        padding: 1rem;
+        bottom: 5%;
+      }
     }
      h1{
       width: 100%;
@@ -64,6 +69,10 @@ export default {
       font-size: 25px;
       font-family: "barlowBold";
       color: #3c7668;
+      @media (min-width:375px) {
+        font-size: 20px;
+        padding-bottom: 1.5rem;
+      }
     }
   }
   .photography{
@@ -91,6 +100,11 @@ export default {
       @media (max-width:234px) {
         bottom: 5%;
       }
+      @media (min-width:375px) {
+        font-size: 10px;
+        padding: 1rem;
+        bottom: 5%;
+      }
     }
      h1{
       width: 100%;
@@ -101,6 +115,10 @@ export default {
       font-size: 25px;
       font-family: "barlowBold";
       color: #2a78a2;
+      @media (min-width:375px) {
+        font-size: 20px;
+        padding-bottom: 1.5rem;
+      }
     }
   }
 </style>

@@ -18,6 +18,9 @@ export default {
     .gallery{
         display:grid;
         grid-template-columns: repeat(2,1fr);
+        @media (min-width:375px) {
+            grid-template-columns: repeat(4,1fr);
+        }
         img{
             width: 100%;
             height: auto;
