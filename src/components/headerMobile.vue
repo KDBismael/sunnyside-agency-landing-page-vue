@@ -1,5 +1,6 @@
 <template>
   <div class="header">
+        <img src="../../images/mobile/image-header.jpg" alt="">
         <div class="nav-head">
             <div class="logo">
                 <img src="../../images/logo.svg" alt=" logo">
@@ -10,15 +11,16 @@
         </div>
         <p class="text">{{navText}}</p>
         <div v-if="burger" class="nav-menu">
-           <div v-on:click="toggleNav" class="modalContent">
-             <nav>
-                <ul>
-                    <router-link to="/">About</router-link>
-                    <router-link class="service" to="/">Services</router-link>
-                    <router-link to="/">Projects</router-link>
-                    <router-link class="contact" to="/">Contact</router-link>
-                </ul>
-            </nav>
+            <div v-on:click="toggleNav" class="overlay"></div>
+            <div class="modalContent">
+                <nav>
+                    <ul>
+                        <router-link to="/">About</router-link>
+                        <router-link class="service" to="/">Services</router-link>
+                        <router-link to="/">Projects</router-link>
+                        <router-link class="contact" to="/">Contact</router-link>
+                    </ul>
+                </nav>
            </div>
         </div>
         
@@ -47,14 +49,13 @@ export default {
 
 <style lang="scss" scoped>
     .header{
-        background-image: url('../../images/mobile/image-header.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-y: bottom;
-        width: 100%;
-        min-height: 20rem;
+        img{
+            object-fit: cover;
+            object-position: center;
+            height: auto;
+            width: 100%;
+        }
         display: grid;
-        grid-template-columns: 55% 45%;
         position: relative;
         .nav-head{
             align-self: start;
@@ -87,26 +88,24 @@ export default {
             }
         }
         .text{
-            grid-column: 1/3;
-            justify-self:center;
-            align-self:start;
-            font-weight: bold;
             color: white;
             font-size: 36px;
+            width: 100%;
             text-align: center;
+            top: 10%;
+            position: absolute;
+            padding: 1.5rem;
+            font-family: "barlowBold";
         }
         .arrow-down{
-            width: 100%;
-            max-height: 100px;
-            align-self: start;
+            position: absolute;
+            bottom: 22%;
             display: grid;
-            grid-column: 1/3;
+            width: 100%;
              img{
-                 align-self: start;
-                justify-self:center;
-                height: 50px;
-                width: 20px;
-                transform: translateY(-15px);
+                max-width: 20px;
+                height: auto;
+                justify-self: center;
             }
         } /*menu modal part */
         .nav-menu{
@@ -118,6 +117,15 @@ export default {
             width: 100%;
             height: 100%;
             z-index: 1;
+            .overlay{
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
             .modalContent{
                 width: 100%;
                 height: 100%;
@@ -186,7 +194,7 @@ export default {
         }
 
     }
-     @media (min-width:300) {
+    @media (min-width:300) {
         .header{
             min-height: 26rem;
         }

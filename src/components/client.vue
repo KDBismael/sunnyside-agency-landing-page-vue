@@ -41,10 +41,12 @@ export default {
 
 <style scoped>
 
-    .cli h1:first-child{
-    font-size: 25px;
+.cli h1:first-child{
+    font-size: 20px;
+    font-family: "barlowBold";
     text-align: center;
     margin-top: 3rem;
+    color: #a8a9ab;
 }
 .emily{
     margin-top: 2rem;
@@ -68,14 +70,17 @@ export default {
     margin: 1rem;
     font-size:14px;
     text-align: center;
+    color: #6a696e;
+    font-weight: bold;
 }
 .emily h1{
     font-size: 17px;
     justify-self: center;
+    font-family: "barlowBold";
 }
 .emily .work{
     font-size: 11px;
     margin-top: .3rem;
+    color: #b0aeae;
 }
-
 </style>

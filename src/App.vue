@@ -66,5 +66,6 @@ export default {
 body{
     font-family: "barlowRegular","barlowThin";
 }
+
 /*global style end */
 </style>

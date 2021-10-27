@@ -1,8 +1,8 @@
 <template>
     <div class="content">
         <div class="transform">
-            <div class="image">
-
+            <div class="image1">
+                <img src="../../images/mobile/image-transform.jpg" alt="">
             </div>
             <div class="text">
                 <h1>Transform your brand</h1>
@@ -13,7 +13,9 @@
             </div>
         </div>
         <div class="stand">
-            <div class="image"> </div>
+            <div class="image1">
+                 <img src="../../images/mobile/image-stand-out.jpg" alt="">
+            </div>
             <div class="text">
                  <h1>Stand out to the right audience</h1>
                 <p>
@@ -38,15 +40,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    $data:'../../images/mobile/image-transform.jpg';
     .transform{
         display: grid;
-        .image{
-            background-image: url($data);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width:100%;
-            min-height:200px;
+        .image1{
+            display: grid;
+            img{
+                width: 100%;
+                height: auto;
+                object-position: center;
+                object-fit: cover;
+            }
         }
         .text{
             display: grid;
@@ -56,30 +59,36 @@ export default {
                 text-align: center;
                 padding-bottom: 0;
                 font-size: 25px;
+                font-family: "barlowBold";
+                color: #4d535c;
             }
             p{
                 font-size: 14px;
                 padding: 1rem;
                 text-align: center;
                 justify-self: center;
+                color: #b2b0b5;
+                font-weight: bold;
             }
             a{
                 text-decoration: none;
                 margin-bottom: 2rem;
                 justify-self: center;
-                font-weight: bold;
-                color: black;
+                font-family: "barlowBold";
+                color: #4d535c;
             }
         }
     }
     .stand{
         display: grid;
-        .image{
-            background-image: url('../../images/mobile/image-stand-out.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            width:100%;
-            min-height:200px;
+        .image1{
+             display: grid;
+            img{
+                width: 100%;
+                height: auto;
+                object-position: center;
+                object-fit: cover;
+            }
         }
         .text{
             display: grid;
@@ -89,19 +98,23 @@ export default {
                 text-align: center;
                 padding-bottom: 0;
                 font-size: 25px;
+                font-family: "barlowBold";
+                color: #4d535c;
             }
             p{
                 font-size: 14px;
                 padding: 1rem;
                 text-align: center;
                 justify-self: center;
+                color: #b2b0b5;
+                font-weight: bold;
             }
             a{
                 text-decoration: none;
                 margin-bottom: 2rem;
                 justify-self: center;
-                font-weight: bold;
-                color: black;
+                font-family: "barlowBold";
+                color: #4d535c;
             }
         }
     }
