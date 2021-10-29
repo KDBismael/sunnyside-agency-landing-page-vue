@@ -54,8 +54,10 @@ export default {
       @media (max-width:268px) {
         padding: 1rem;
       }
-      @media (max-width:234px) {
+     @media (max-width:234px) {
         bottom: 2%;
+        padding: 0;
+        font-size: 10px;
       }
        @media (min-width:375px) {
         font-size: 10px;
@@ -152,6 +154,8 @@ export default {
       }
       @media (max-width:234px) {
         bottom: 5%;
+        padding: 0;
+        font-size: 10px;
       }
       @media (min-width:375px) {
         font-size: 10px;
