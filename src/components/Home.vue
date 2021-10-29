@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-      <learn></learn>
+      <learn v-bind:mobile="mobile"></learn>
       <div class="art">
-        <art :artG="artG"></art>
-        <art :artP="artP"></art>
+        <art :artG="artG" :mobile="mobile"></art>
+        <art :artP="artP" :mobile="mobile"></art>
       </div>
       <client></client>
-      <image-gallery></image-gallery>
+      <image-gallery :mobile="mobile"></image-gallery>
 
   </div>
 </template>
@@ -29,11 +29,23 @@ export default {
     data(){
       return{
         artG:"graphic",
-        artP:"photography"
+        artP:"photography",
+        mobile:null,
+        width:null
       }
     },
-    props:{
-      mobile:Boolean,
+    methods:{
+      toggleMobileHeader:function(){
+        this.width=window.innerWidth;
+        if(this.width<=375){
+          this.mobile=true;
+          return;
+        }
+        else{
+          this.mobile=false;
+          return;
+        }
+      }
     }
 
 }

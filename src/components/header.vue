@@ -60,6 +60,9 @@ export default {
                img{
                    object-fit: cover;
                    width: 70%;
+                   @media (min-width:600px) {
+                       width: 100%;
+                   }
                }
             }
         }

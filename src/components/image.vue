@@ -1,15 +1,22 @@
 <template>
   <div class="gallery">
-      <img src="../../images/mobile/image-gallery-milkbottles.jpg" alt="">
-      <img src="../../images/mobile/image-gallery-orange.jpg" alt="">
-      <img src="../../images/mobile/image-gallery-cone.jpg" alt="">
-      <img src="../../images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+      <img v-if="mobile" src="../../images/mobile/image-gallery-milkbottles.jpg" alt="">
+      <img v-if="!mobile" src="../../images/desktop/image-gallery-milkbottles.jpg" alt="">
+      <img v-if="mobile" src="../../images/mobile/image-gallery-orange.jpg" alt="">
+      <img v-if="!mobile" src="../../images/desktop/image-gallery-orange.jpg" alt="">
+      <img v-if="mobile" src="../../images/mobile/image-gallery-cone.jpg" alt="">
+      <img v-if="!mobile" src="../../images/desktop/image-gallery-cone.jpg" alt="">
+      <img v-if="mobile" src="../../images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+      <img v-if="!mobile" src="../../images/desktop/image-gallery-sugarcubes.jpg" alt="">
   </div>
 </template>
 
 <script>
 export default {
     name:'image',
+    props:{
+        mobile:Boolean
+    }
 }
 </script>
 
