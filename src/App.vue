@@ -67,5 +67,5 @@ body{
     font-family: "barlowRegular","barlowThin";
 }
 
-/*global style end */
+/*global style end  */
 </style>
